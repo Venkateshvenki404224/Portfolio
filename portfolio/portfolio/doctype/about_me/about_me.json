@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-19 21:48:39.384991",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "full_name",
+  "email_id",
+  "experience",
+  "client",
+  "column_break_tfiw",
+  "profile_image",
+  "favicon",
+  "header_image",
+  "column_break_bzrx",
+  "role_section",
+  "primary_role",
+  "secondary",
+  "column_break_dskk",
+  "resume",
+  "social_profile_section",
+  "linkedin",
+  "twitter",
+  "github"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Int",
+   "label": "Experience",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_tfiw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id",
+   "reqd": 1
+  },
+  {
+   "fieldname": "favicon",
+   "fieldtype": "Attach Image",
+   "label": "Favicon"
+  },
+  {
+   "fieldname": "profile_image",
+   "fieldtype": "Attach Image",
+   "label": "Profile Image",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "client",
+   "fieldtype": "Int",
+   "label": "Client",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "role_section",
+   "fieldtype": "Section Break",
+   "label": "Role"
+  },
+  {
+   "fieldname": "primary_role",
+   "fieldtype": "Data",
+   "label": "Primary Role",
+   "reqd": 1
+  },
+  {
+   "fieldname": "secondary",
+   "fieldtype": "Data",
+   "label": "Secondary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dskk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "label": "Resume",
+   "reqd": 1
+  },
+  {
+   "fieldname": "social_profile_section",
+   "fieldtype": "Section Break",
+   "label": "Social Profile"
+  },
+  {
+   "fieldname": "linkedin",
+   "fieldtype": "Data",
+   "label": "LinkedIn",
+   "reqd": 1
+  },
+  {
+   "fieldname": "twitter",
+   "fieldtype": "Data",
+   "label": "Twitter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "github",
+   "fieldtype": "Data",
+   "label": "Github",
+   "reqd": 1
+  },
+  {
+   "fieldname": "header_image",
+   "fieldtype": "Attach Image",
+   "label": "Header Image"
+  },
+  {
+   "fieldname": "column_break_bzrx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "image_field": "profile_image",
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "modified": "2024-08-19 22:38:59.023895",
+ "modified_by": "Administrator",
+ "module": "Portfolio",
+ "name": "About me",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name"
+}
