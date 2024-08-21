@@ -1,0 +1,54 @@
+<div class="nav-top pt-[30px] pb-[30px] relative z-10">
+  {% set doc = frappe.get_doc('About me')%}
+  <div
+    class="container py-[6px] relative w-full xxl:max-w-[1280px] xl:max-w-[1140px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[640px] mx-auto px-[3px]"
+  >
+    <div class="grid md:grid-cols-12 grid-cols-1">
+      <div class="md:col-span-4 col-span-1 px-[15px] flex items-center">
+        <a href="#0" class="logo">
+          <img
+            style="width: 11rem"
+            class="h-auto"
+            src="{{ doc.header_image }}"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="col-span-1 md:col-span-8 px-[15px]">
+        <div class="relative navbar hidden lg:!block">
+          <div
+            class="row flex flex-col lg:flex-row justify-center lg:justify-end rest"
+          >
+            <div class="relative">
+              <!-- navbar links -->
+              <ul
+                class="navbar-nav absolute py-[40px] lg:py-[0px] border-b-[2px] border-[#ffffff33] bottom-[-300px] lg:bottom-[0px] w-full text-[18px] left-0 lg:relative lg:border-none lg:mt-0 bg-dark lg:bg-transparent flex flex-col gap-y-[4px] lg:gap-y-0 justify-center text-center lg:flex-row lg:justify-normal uppercase lg:text-[13px] lg:font-[300] lg:w-auto"
+              >
+                <li class="nav-item px-[15px] py-[10]">
+                  <a href="/"><span>Home</span></a>
+                </li>
+                <li class="nav-item px-[15px] py-[10]">
+                  <a href="/about"><span>About</span></a>
+                </li>
+                <li class="nav-item px-[15px] py-[10]">
+                  <a href="/work"><span>Portfolio</span></a>
+                </li>
+                <li class="nav-item px-[15px] py-[10]">
+                  <a href="/contact"><span>Contact</span></a>
+                </li>
+                <li class="nav-item px-[15px] py-[10]">
+                  <a href="/article"><span>Blog</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="nav-butn absolute top-[0] right-[15px] text-[25px] cursor-pointer lg:hidden block"
+    >
+      <span class="pe-7s-menu"></span>
+    </div>
+  </div>
+</div>
