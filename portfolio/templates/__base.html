@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="zxx">
-  <head>
-    <!-- Metas -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <meta
-      name="keywords"
-      content="{% block meta_keywords %}HTML5 Template Gavi Multi-Purpose themeforest{% endblock %}"
-    />
-    <meta
-      name="description"
-      content="{% block meta_description %}Gavi - Multi-Purpose HTML5 Template{% endblock %}"
-    />
-    <meta name="author" content="{% block meta_author %}{% endblock %}" />
+<head>
+  <!-- Metas -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="keywords"
+    content="{% block meta_keywords %}HTML5 Template Gavi Multi-Purpose themeforest{% endblock %}" />
+  <meta name="description" content="{% block meta_description %}Gavi - Multi-Purpose HTML5 Template{% endblock %}" />
+  <meta name="author" content="{% block meta_author %}{% endblock %}" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B28KXCFPNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <!-- Title  -->
-    <title>{% block title %}{% endblock %}</title>
+    gtag('config', 'G-B28KXCFPNN');
+  </script>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/portfolio/imgs/favicon.ico" />
+  <!-- Title  -->
+  <title>{% block title %} Home {% endblock %}</title>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/portfolio/imgs/M.png" />
 
-    <!-- Plugins -->
-    <link rel="stylesheet" href="assets/portfolio/css/plugins.css" />
-    <link href="assets/portfolio/css/main.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Core Style Css -->
-    {% block extra_head %}{% endblock %}
-  </head>
-  <body class="bg-sub_dark text-[14px] lg:px-[40px]">
-    {% set doc = frappe.get_doc('About me')%}
-    <!-- <div
+  <!-- Plugins -->
+  <link rel="stylesheet" href="assets/portfolio/css/plugins.css" />
+  <link href="assets/portfolio/css/main.css" rel="stylesheet" />
+
+
+  <!-- Core Style Css -->
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body class="bg-sub_dark text-[14px] lg:px-[40px]">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMC2ZNJB" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% set doc = frappe.get_doc('About me')%}
+  <!-- <div
       class="loader-wrap fixed inset-0 flex items-center justify-center z-50 overflow-hidden bg-transparent"
     >
       <svg
@@ -58,7 +59,7 @@
         <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
       </svg> -->
 
-      <!-- <div
+  <!-- <div
         class="loader-wrap-heading relative z-20 text-xl font-thin tracking-wider uppercase"
       >
         <div class="load-text">
@@ -94,10 +95,10 @@
             >g</span
           >
         </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
 
-    <!-- <div class="cursor"></div>
+  <!-- <div class="cursor"></div>
     <div class="progress-wrap cursor-pointer">
       <svg
         class="progress-circle svg-content"
@@ -128,46 +129,50 @@
         class="h-full !w-[10%] mx-[5%] border-r border-l border-white border-opacity-5 border-dashed"
       ></span>
     </div> -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMC2ZNJB" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Include the navbar -->
+  {% include "templates/__navbar.html" %}
 
-    <!-- Include the navbar -->
-    {% include "templates/__navbar.html" %}
+  <div class="nav-top pt-[30px] pb-[30px] relative z-10">
+    {% block content %}
+    <!-- Main content goes here -->
+    {% endblock %}
+  </div>
 
-    <div class="nav-top pt-[30px] pb-[30px] relative z-10">
-      {% block content %}
-      <!-- Main content goes here -->
-      {% endblock %}
-    </div>
+  <!-- ==================== Start Footer ==================== -->
 
-    <!-- ==================== Start Footer ==================== -->
-
-    <footer class="pb-[30px] pt-[30px]">
+  <footer class="pb-[30px] pt-[30px]">
+    <div class="w-full">
       <div class="w-full">
-        <div class="w-full">
-          <div class="col-12 px-[30px] w-full">
-            <div class="text-center">
-              <p class="text-[13px] text-[#ddd] font-[300]">
-                © {{ frappe.utils.now_datetime().year }} All Rights Reserved by
-                <span class="text-main">{{ doc.full_name }}</span>
-              </p>
-            </div>
+        <div class="col-12 px-[30px] w-full">
+          <div class="text-center">
+            <p class="text-[13px] text-[#ddd] font-[300]">
+              © {{ frappe.utils.now_datetime().year }} All Rights Reserved by
+              <span class="text-main">{{ doc.full_name }}</span>
+            </p>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- ==================== End Footer ==================== -->
+  <!-- ==================== End Footer ==================== -->
 
-    <!-- jQuery -->
-    <script src="assets/portfolio/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/portfolio/js/jquery-migrate-3.4.0.min.js"></script>
+  <!-- jQuery -->
+  <script src="assets/portfolio/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/portfolio/js/jquery-migrate-3.4.0.min.js"></script>
 
-    <!-- plugins -->
-    <script src="assets/portfolio/js/plugins.js"></script>
+  <!-- plugins -->
+  <script src="assets/portfolio/js/plugins.js"></script>
 
-    <script src="assets/portfolio/js/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="assets/portfolio/css/style.css" />
+  <script src="assets/portfolio/js/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="assets/portfolio/css/style.css" />
 
-    <!-- custom scripts -->
-    <script src="assets/portfolio/js/scripts.js"></script>
-  </body>
+  <!-- custom scripts -->
+  <script src="assets/portfolio/js/scripts.js"></script>
+</body>
+
 </html>

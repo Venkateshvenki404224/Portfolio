@@ -1,7 +1,151 @@
-{%extends "templates/__base.html" %} 
-{% block content %} 
+{%extends "templates/__base.html" %} {% block content %}
 
-<h1>This my About page</h1> 
 
+<main
+  class="container w-full xxl:max-w-[1280px] rounded-t-[15px] xl:max-w-[1140px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[640px] mx-auto px-[3px]"
+>
+    <section class="intro-profile md-mb50">
+    <div
+        class="row rest flex flex-col md:flex-row justify-normal md:justify-between"
+    >
+        <div
+        class="md:w-[33.33%] rounded-l-3xl w-full py-[80px] px-[15px] md:px-[40px] mb-[-80px] overflow-hidden bg-dark"
+        >
+        <div
+            class="cont valign flex justify-center items-center py-[40px] px-[15px] border border-[#ffffff0d] rounded-lg min-h-[calc(100%-80px)]"
+        >
+            <div class="w-full">
+            <div class="img relative">
+                <img src="{{ doc.profile_image }}" alt="" />
+                <span
+                style="
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                "
+                class="icon absolute top-8 -left-5 transform rotate-3 w-10 h-10 rounded-lg border border-white border-opacity-10 p-2 bg-white bg-opacity-5 z-30"
+                >
+                <img src="assets/portfolio/imgs/header/python.png" alt="" />
+                </span>
+                <span
+                style="
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                "
+                class="icon absolute w-10 h-10 rounded-lg border border-white border-opacity-10 p-2 bg-white bg-opacity-5 z-30 bottom-[30px] left-[20px] transform rotate-6"
+                >
+                <img src="assets/portfolio/imgs/header/icon2.png" alt="" />
+                </span>
+                <span
+                style="
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                    right: 10px;
+                "
+                class="icon absolute w-10 h-10 rounded-lg border border-white border-opacity-10 p-2 bg-white bg-opacity-5 z-30 bottom-[30px] transform rotate-6"
+                >
+                <img src="assets/portfolio/imgs/header/frappe.png" alt="" />
+                </span>
+                <span
+                style="
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                "
+                class="icon absolute w-10 h-10 rounded-lg border border-white border-opacity-10 flex top-[40%] !right-[-20px] bg-white bg-opacity-5 z-30"
+                >
+                <img
+                    class="object-contain"
+                    src="assets/portfolio/imgs/header/docker.png"
+                    alt=""
+                />
+                </span>
+            </div>
+            <div class="info text-center mt-[30px]">
+                <h5 class="font-[500] text-[24px]">{{ doc.full_name }}</h5>
+                <p class="text-[13px] font-[300] text-[#ddd] uppercase">
+                Available For Freelance
+                </p>
+            </div>
+            <div
+                class="mx-auto w-[65%] md:w-[80%] grid grid-cols-3 items-center content-enter justify-content-center justify-center text-center mt-[20px]"
+            >
+                <a href="{{ doc.twitter }}"
+                ><i
+                    class="fab fa-twitter w-[45px] h-[45px] leading-10 text-center text-[12px] rounded-md flex items-center justify-center border border-[#fff] border-opacity-20 transition-all duration-400 ease-in-out hover:bg-[#fff] hover:text-[#1d1d1d]"
+                ></i
+                ></a>
+                <a href="{{ doc.github }}"
+                ><i
+                    class="fab fa-github w-[45px] h-[45px] leading-10 text-center text-[12px] rounded-md flex items-center justify-center border border-[#fff] border-opacity-20 transition-all duration-400 ease-in-out hover:bg-[#fff] hover:text-[#1d1d1d]"
+                ></i
+                ></a>
+                <a href="{{ doc.linkedin }}"
+                ><i
+                    class="fab fa-linkedin-in w-[45px] h-[45px] leading-10 text-center text-[12px] rounded-md flex items-center justify-center border border-[#fff] border-opacity-20 transition-all duration-400 ease-in-out hover:bg-[#fff] hover:text-[#1d1d1d]"
+                ></i
+                ></a>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div
+        class="md:w-[66.66%] after:hidden md:after:inline-block w-full content bg-dark py-[80px] px-[15px] md:px-[40px] border-r rounded-r-3xl border-dark relative text-[30px] md:text-[40px] lg:text-[55px] font-[500] leading-[1.3] after:content-[''] after:w-[0px] after:h-[0px] after:border-t-[83px] after:border-t-[#1d1d1d] after:border-r-[80px] after:border-transparent after:absolute after:left-[-5px] after:bottom-[-83px]"
+        >
+        <h1
+            class="text-[30px] md:text-[40px] lg:text-[55px] font-[500] leading-[1.3]"
+        >
+            Hello, I’m <span class="text-main">{{ doc.full_name }}</span>, {{
+            doc.primary_role }} &
+            <span
+            class="bord px-[20px] py-[0] border-[1px] border-[#ffffff1a] relative inline-block after:content-[''] after:w-[6px] after:h-[6px] after:rounded-[50%] after:bg-[#fff] after:absolute after:pointer-events-none after:box-border after:top-[-3px] after:right-[-3px] before:content-[''] before:w-[6px] before:h-[6px] before:rounded-[50%] before:bg-[#fff] before:absolute before:pointer-events-none before:box-border before:top-[-3px] before:left-[-3px]"
+            >{{ doc.secondary }}
+            <i
+                class="after:content-[''] after:w-[6px] after:h-[6px] after:rounded-[50%] after:bg-[#fff] after:absolute after:pointer-events-none after:box-border after:bottom-[-3px] after:right-[-3px] before:content-[''] before:w-[6px] before:h-[6px] before:rounded-[50%] before:bg-[#fff] before:absolute before:pointer-events-none before:box-border before:bottom-[-3px] before:left-[-3px]"
+            ></i
+            ></span>
+            Based in Bangalore.
+        </h1>
+        <div class="stauts mt-[80px]">
+            <div class="md:flex items-center">
+            <div class="mr-[40px] md:mt-[0px]">
+                <div class="flex items-center">
+                <h2 class="text-[50px] lg:text-[70px] font-[500]">
+                    {{ doc.experience }}
+                </h2>
+                <p
+                    class="pl-[20px] leading-[1.3] text-[15px] font-[300px] text-[#ddd] m-0"
+                >
+                    Years <br />
+                    of Experance
+                </p>
+                </div>
+            </div>
+            <div class="mr-[40px] mt-[25px] md:mt-[0px]">
+                <div class="flex items-center">
+                <h2 class="text-[50px] lg:text-[70px] font-[500]">
+                    {{ doc.client }}
+                </h2>
+                <p
+                    class="pl-[20px] leading-[1.3] text-[15px] font-[300px] text-[#ddd] m-0"
+                >
+                    Clients <br />
+                    Worldwide
+                </p>
+                </div>
+            </div>
+            <div class="mt-[25px] md:mt-[0px] w-[160px] md:w-auto">
+                <div class="butn-presv [perspective:500px] w-[160px] md:w-auto">
+                <a
+                    href="{{ doc.resume }}"
+                    class="bg-transparent w-full h-full block py-[14px] px-[35px] border border-[#fff] text-[14px] hover:bg-[#fff] rounded-md hover:text-dark transition-all duration-[.5s] ease-in-out [transform:rotateX(20deg)] hover:[transform:rotateX(0deg)]"
+                >
+                    <span class="inline-block">Dwonload C.V</span>
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+</main>
 {% endblock %}
- 

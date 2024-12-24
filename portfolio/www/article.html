@@ -20,8 +20,8 @@
       </h3>
     </div>
     <div class="row xs:px-0 sm:px-[3px] md:px-[1.5rem] flex justify-center">
-      {% set latest_blog = frappe.get_all('Blog Post', filters={'published': 1,'featured': 1}, fields=['*'], order_by='published_on desc', limit=1) %}
-      {% set remaining_blogs = frappe.get_all('Blog Post', filters={'published': 1}, fields=['*'], order_by='published_on desc', start=1) %}
+      {% set latest_blog = frappe.get_all('Blog Post', filters={'published': 1, 'featured': 1}, fields=['*'], limit=1) %}
+      {% set remaining_blogs = frappe.get_all('Blog Post', filters={'published': 1}, fields=['*'], start=1) %}
       <!-- Check if there is a latest blog -->
       {% if latest_blog %}
         {% set blog = latest_blog[0] %}
@@ -62,6 +62,11 @@
                   <span class="date text-main rounded-[30px] text-[11px] text-[#ddd] py-[8px] px-[15px] uppercase mb-[10px] border border-[#444343]">{{ blog.read_time }}{{ _('min read') }} </span>
                   {%- endif -%}
                 </div>
+                <div class="blog-feedback">
+                  {% if not blog.disable_likes %}
+                    {% include 'templates/includes/likes/likes.html' %}
+                  {% endif %}
+                </div>
                 <div class="text-muted">
                   {%- if blog.featured -%}
                   <span class="date text-main rounded-[30px] text-[11px] text-[#ddd] py-[8px] px-[15px] uppercase mb-[10px] border border-[#444343]">Featured</span>
@@ -90,7 +95,9 @@
           </div>
         </div>
       {% else %}
-      <p>No blogs available at the moment. Please check back later.</p>
+      <h3 class="text-[24px] md:text-[30px] font-[500]">
+        <span class="text-main">Their is no featured Blog yet</span> Please check back later....
+      </h3>
       {% endif %}
     </div>
   </section>
@@ -170,7 +177,9 @@
           </div>
         {% endfor %}
       {% else %}
-        <p>No blogs available at the moment. Please check back later.</p>
+        <h3 class="text-[24px] md:text-[30px] font-[500]">
+          No blogs available at the moment. <span class="text-main"> Please check back later.</span>
+        </h3>
       {% endif %}
     </div>
     <!-- Pagination Controls -->

@@ -1,0 +1,25 @@
+{
+ "__unsaved": 1,
+ "creation": "2024-08-22 09:01:05.968136",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Blogs",
+   "reqd": 0
+  }
+ ],
+ "idx": 0,
+ "modified": "2024-08-22 10:21:19.675947",
+ "modified_by": "Administrator",
+ "module": "Portfolio",
+ "name": "custom",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Navbar"
+}
