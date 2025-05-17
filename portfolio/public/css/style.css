@@ -413,7 +413,7 @@ body:before {
 	overflow: hidden;
 }
 
-.card.slide-1 {
+/* .card.slide-1 {
 	background: #2e0916;
 	background: linear-gradient(331deg, #2e0916 0%, #200a2b 100%);
 }
@@ -426,7 +426,7 @@ body:before {
 .card.slide-3 {
 	background: #0c3720;
 	background: linear-gradient(331deg, #5b874b 0%, #0c3720 100%);
-}
+} */
 
 .svg-wrapper {
 	width: 100%;

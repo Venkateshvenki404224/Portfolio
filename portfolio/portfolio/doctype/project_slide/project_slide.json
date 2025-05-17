@@ -10,6 +10,7 @@
   "order",
   "rank_label",
   "project_title",
+  "bg_color",
   "column_break_hgjj",
   "cta_button_text",
   "cta_url",
@@ -60,18 +61,23 @@
   },
   {
    "fieldname": "image",
-   "fieldtype": "Data",
+   "fieldtype": "Attach",
    "label": "Image"
   },
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "bg_color",
+   "fieldtype": "Color",
+   "label": "Bg Color"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-17 22:03:25.647492",
+ "modified": "2025-05-17 22:46:50.601302",
  "modified_by": "Administrator",
  "module": "Portfolio",
  "name": "Project Slide",
