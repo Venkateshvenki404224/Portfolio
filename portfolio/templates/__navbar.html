@@ -1,51 +1,35 @@
-<div class="nav-top pt-[30px] pb-[30px] relative z-10">
-  {% set doc = frappe.get_doc('About me')%}
-  <div
-    class="container py-[6px] relative w-full xxl:max-w-[1280px] xl:max-w-[1140px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[640px] mx-auto px-[3px]"
-  >
-    <div class="grid md:grid-cols-12 grid-cols-1">
-      <div class="md:col-span-4 col-span-1 px-[15px] flex items-center">
-        <a href="#0" class="logo">
-          <img
-            style="width: 11rem"
-            class="h-auto"
-            src="{{ doc.header_image }}"
-            alt=""
-          />
-        </a>
-      </div>
-      <div class="col-span-1 md:col-span-8 px-[15px]">
-        <div class="relative navbar hidden lg:!block">
-          <div
-            class="row flex flex-col lg:flex-row justify-center lg:justify-end rest"
-          >
-            <div class="relative">
-              <!-- navbar links -->
-              <ul
-                class="navbar-nav absolute py-[40px] lg:py-[0px] border-b-[2px] border-[#ffffff33] bottom-[-300px] lg:bottom-[0px] w-full text-[18px] left-0 lg:relative lg:border-none lg:mt-0 bg-dark lg:bg-transparent flex flex-col gap-y-[4px] lg:gap-y-0 justify-center text-center lg:flex-row lg:justify-normal uppercase lg:text-[13px] lg:font-[300] lg:w-auto"
-              >
-                <li class="nav-item px-[15px] py-[10]">
-                  <a href="/"><span>Home</span></a>
-                </li>
-                <li class="nav-item px-[15px] py-[10]">
-                  <a href="/about"><span>About</span></a>
-                </li>
-                <li class="nav-item px-[15px] py-[10]">
-                  <a href="/contact"><span>Contact</span></a>
-                </li>
-                <li class="nav-item px-[15px] py-[10]">
-                  <a href="/article"><span>Blog</span></a>
-                </li>
-              </ul>
+<div class="nav-top z-20 relative  pt-[30px] pb-[30px]">
+    <div
+      class="w-full relative xxl:max-w-[1280px] xl:max-w-[1140px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[640px] mx-auto px-[3px]">
+      <div class="grid grid-cols-3">
+        <div class="col-md-4 px-[15px] flex items-center">
+          <a href="/" class="logo">
+            <img style="width: 11rem;" class="h-auto" src="{{ doc.header_image }}" alt="" />
+          </a>
+        </div>
+        <div class="col-md-4 px-[15px] hidden lg:block valign">
+          <div class="social text-center w-full">
+            <a href="{{ doc.twitter }}"><i
+                class="fab fa-twitter w-10 h-10 leading-10 text-center text-xs border border-white border-opacity-20 rounded-full mx-0.5 transition-all duration-400 ease-in-out hover:bg-[#fff] hover:text-[#1d1d1d]"></i></a>
+            <a href="{{ doc.github }}"><i
+                class="fab fa-github w-10 h-10 leading-10 text-center text-xs border border-white border-opacity-20 rounded-full mx-0.5 transition-all duration-400 ease-in-out hover:bg-[#fff] hover:text-[#1d1d1d]"></i></a>
+            <a href="{{ doc.linkedin }}"><i
+                class="fab fa-linkedin-in w-10 h-10 leading-10 text-center text-xs border border-white border-opacity-20 rounded-full mx-0.5 transition-all duration-400 ease-in-out hover:bg-[#fff] hover:text-[#1d1d1d]"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 px-[15px] hidden lg:block valign">
+          <div class="w-full info">
+            <div class="flex justify-end">
+              <a href="mailto:{{ doc.email_id }}">
+                <span class="sub-title fz-12 text-[12px] font-light uppercase tracking-widest">{{ doc.email_id }}</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="nav-butn absolute top-[0] right-[15px] text-[25px] cursor-pointer lg:hidden block"
-    >
-      <span class="pe-7s-menu"></span>
+      <div class="nav-butn absolute top-[0] right-[15px] text-[25px] cursor-pointer lg:hidden block ">
+        <span class="pe-7s-menu"></span>
+      </div>
     </div>
   </div>
-</div>
+  

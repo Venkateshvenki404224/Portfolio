@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:project_name",
+ "creation": "2025-05-17 21:59:43.797772",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_name",
+  "order",
+  "rank_label",
+  "project_title",
+  "column_break_hgjj",
+  "cta_button_text",
+  "cta_url",
+  "your_role",
+  "image",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Int",
+   "label": "Order"
+  },
+  {
+   "fieldname": "rank_label",
+   "fieldtype": "Data",
+   "label": "Rank Label"
+  },
+  {
+   "fieldname": "project_title",
+   "fieldtype": "Data",
+   "label": "Project Title"
+  },
+  {
+   "fieldname": "column_break_hgjj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cta_button_text",
+   "fieldtype": "Data",
+   "label": "CTA Button Text"
+  },
+  {
+   "fieldname": "cta_url",
+   "fieldtype": "Data",
+   "label": "CTA URL"
+  },
+  {
+   "fieldname": "your_role",
+   "fieldtype": "Data",
+   "label": "Your Role"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Data",
+   "label": "Image"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-17 22:03:25.647492",
+ "modified_by": "Administrator",
+ "module": "Portfolio",
+ "name": "Project Slide",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
