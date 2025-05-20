@@ -15,7 +15,8 @@
             'image',
             'bg_color',
             ],
-            order_by="`order` asc"
+            order_by="`order` asc",
+            ignore_permissions=True
             ) -%}
 
             {% for slide in slides %}

@@ -45,11 +45,6 @@
               <h6 class="sub-title opacity-70 mb-[15px] text-[14px] font-[300] uppercase tracking-widest">
                 My Projects
               </h6>
-              <h3 class="font-[500] md:text-[38px] text-[24px]">
-                From Code to Creation
-                </br>
-                <span class="text-main">Automation </span> Beyond Limits
-              </h3>
             </div>
           </div>
         </div>
@@ -62,6 +57,7 @@
       <!-- ==================== End Services ==================== -->
 
       <!-- ==================== Start Skills ==================== -->
+
 
       <div
         class="sec-box px-[15px] md:px-[40px] lg:px-[50px] py-[100px] bg-dark skills section-padding bord-thin-bottom"
@@ -224,6 +220,7 @@
               </div>
             </div>
           </div>
+          
           <div class="grid md:grid-cols-3 grid-cols-1 md:gap-x-5 ">
             {% set blogs = frappe.get_all('Blog Post', filters={'published': 1}, fields=['*'], order_by='published_on desc',limit=3) %}
             {% if blogs %}
@@ -270,7 +267,9 @@
             <h2>No blogs available at the moment <span class="text-main ">Please check back later.</span></h2>
             {% endif %}
           </div>
+          
         </div>
+
     </section>
   </main>
 
