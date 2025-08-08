@@ -27,7 +27,7 @@ def submit_contact(name=None, email=None, subject=None, message=None):
         return {'status': 'error', 'message': f"Missing values: {', '.join(missing)}"}
 
     # Validate email format (simple regex)
-    if not re.match(r"^[^@]+@[^@]+\\.[^@]+$", email or ""):
+    if not re.match(r"^[^@]+@[^@]+\.[^@]+$", email or ""):
         frappe.local.response['http_status_code'] = 400
         return {'status': 'error', 'message': 'Invalid email address.'}
 
